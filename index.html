@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Detector & Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Language Detector & Translator</h1>
+        <form id="translationForm">
+            <label for="inputText">Enter Text:</label>
+            <textarea id="inputText" placeholder="Type your text here..." required></textarea>
+            <button type="submit">Detect & Translate</button>
+        </form>
+        <div class="output">
+            <h2>Detected Language: <span id="detectedLanguage"></span></h2>
+            <h2>Translated Text: <span id="translatedText"></span></h2>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
